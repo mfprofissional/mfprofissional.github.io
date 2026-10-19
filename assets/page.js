@@ -25,7 +25,7 @@
   });
 
   /* ── método: etapas em texto ── */
-  $('#steps').innerHTML = D.metodo.map((st, i) => `
+  $('#steps').innerHTML = D.etapas.map((st, i) => `
     <li class="step" data-r style="--d:${.2 + i * .14}s">
       <span class="step-n" aria-label="Etapa ${+st.n}">${st.n}</span>
       <h3>${st.t}</h3>
@@ -68,7 +68,7 @@
   const spy = new IntersectionObserver(es => es.forEach(e => {
     if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
-  ['master', 'metodo', 'programa', 'especialistas', 'inscricao'].forEach(id => spy.observe(document.getElementById(id)));
+  ['master', 'abordagem', 'programa', 'especialistas', 'inscricao'].forEach(id => spy.observe(document.getElementById(id)));
 
   let ticking = false;
   addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { frame(); ticking = false; }); } }, { passive: true });

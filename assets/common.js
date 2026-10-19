@@ -1,4 +1,4 @@
-/* Comportamentos partilhados: reveals, contadores, CTA mobile, programa, formulário. */
+/* Comportamentos partilhados: WhatsApp, programa, reveals, CTA mobile, menu, escolha de turma. */
 (() => {
   const D = window.MASTER;
   const $ = (s, c = document) => c.querySelector(s);
@@ -9,42 +9,42 @@
   if (rm) document.documentElement.classList.add('rm');
   document.documentElement.classList.add('js');
 
-  /* ---------- programa: tabs + módulos em <details> ---------- */
-  const modHTML = (m, k, open) => {
-    const body = m.p
-      ? `<div class="pillars">${m.p.map((p, j) => `<div class="pillar"><span class="pl-n">Pilar ${j + 1}</span><b>${p.t}</b><em>${p.s}</em><ul>${p.i.map(x => `<li>${x}</li>`).join('')}</ul></div>`).join('')}</div>`
-      : `<ul class="mod-list">${m.i.map(x => `<li>${x}</li>`).join('')}</ul>`;
-    return `<details class="mod" name="${k}"${open ? ' open' : ''}><summary><span class="mod-n">${String(open ? 1 : 0).padStart(2, '0')}</span><span class="mod-t">${m.t}</span><span class="mod-x" aria-hidden="true"></span></summary><div class="mod-b">${body}</div></details>`;
-  };
-  const renderProgram = el => {
-    const days = [D.prog.d1, D.prog.d2];
-    el.innerHTML = `
-      <div class="ptabs" role="tablist" aria-label="Programa por dia">
-        ${days.map((d, i) => `<button class="ptab${i ? '' : ' on'}" role="tab" id="pt${i}" aria-controls="pp${i}" aria-selected="${!i}" tabindex="${i ? -1 : 0}"><span class="ptab-d">${d.dia}</span><span class="ptab-t">${d.tema}</span></button>`).join('')}
-      </div>
-      ${days.map((d, i) => `<div class="ppane" role="tabpanel" id="pp${i}" aria-labelledby="pt${i}"${i ? ' hidden' : ''}>${d.mods.map((m, j) => modHTML(m, 'd' + i, false)).join('')}</div>`).join('')}`;
-    $$('.mod', el).forEach(m => {
-      const idx = [...m.parentElement.children].indexOf(m) + 1;
-      $('.mod-n', m).textContent = String(idx).padStart(2, '0');
-    });
-    const tabs = $$('.ptab', el), panes = $$('.ppane', el);
-    const set = i => {
-      tabs.forEach((t, j) => { t.classList.toggle('on', i === j); t.setAttribute('aria-selected', i === j); t.tabIndex = i === j ? 0 : -1; });
-      panes.forEach((p, j) => { p.hidden = i !== j; if (i === j && !rm) { p.classList.remove('anim'); void p.offsetWidth; p.classList.add('anim'); } });
-    };
-    tabs.forEach((t, i) => {
-      t.addEventListener('click', () => set(i));
-      t.addEventListener('keydown', e => {
-        if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-        e.preventDefault(); const n = (i + 1) % tabs.length; tabs[n].focus(); set(n);
-      });
-    });
-  };
-  $$('[data-prog]').forEach(renderProgram);
+  /* ---------- WhatsApp: todos os [data-wa] recebem o link a partir de content.js ---------- */
+  const wa = text => `https://wa.me/${D.wa}?text=${encodeURIComponent(text)}`;
+  $$('[data-wa="geral"]').forEach(a => { a.href = wa(D.msg.geral); a.target = '_blank'; a.rel = 'noopener'; });
 
-  /* ---------- benefícios ---------- */
-  $$('[data-benef]').forEach(el => {
-    el.innerHTML = D.beneficios.map(b => `<li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5 5.5 11 12 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>${b}</span></li>`).join('');
+  /* ---------- escolha de turma: o botão de inscrição acompanha a escolha ---------- */
+  $$('[data-turmas]').forEach(box => {
+    const btn = $('[data-wa="turma"]', box.closest('section'));
+    const upd = () => {
+      const r = $('input:checked', box);
+      if (!btn || !r) return;
+      btn.href = wa(D.msg.turma(r.value)); btn.target = '_blank'; btn.rel = 'noopener';
+      const sel = $('[data-turma-sel]', box.closest('section'));
+      if (sel) sel.textContent = `Turma selecionada: ${r.value} de novembro`;
+    };
+    box.addEventListener('change', upd); upd();
+  });
+
+  /* ---------- imagens opcionais: se o ficheiro ainda não existir, a figura sai da página ---------- */
+  const slot = img => {
+    const gone = () => { const f = img.closest('[data-slot]'); if (f) f.remove(); };
+    if (img.complete && !img.naturalWidth) gone(); else img.addEventListener('error', gone);
+  };
+
+  /* ---------- programa: módulos em <details> ---------- */
+  $$('[data-prog]').forEach(el => {
+    el.innerHTML = D.prog.map((m, i) => `
+      <details class="mod" name="prog"${i ? '' : ' open'}><summary><span class="mod-n">${String(i + 1).padStart(2, '0')}</span><span class="mod-t">${m.t}</span><span class="mod-x" aria-hidden="true"></span></summary>
+        <div class="mod-b"><p class="mod-d">${m.d}</p>${(m.img || []).map(f => `<figure class="mod-f" data-slot><img src="${f.src}" alt="${esc(f.alt)}" width="1200" height="900" loading="lazy" decoding="async"></figure>`).join('')}</div>
+      </details>`).join('');
+    $$('[data-slot] img', el).forEach(slot);
+  });
+  $$('[data-slot] img').forEach(img => img.closest('[data-prog]') || slot(img));
+
+  /* ---------- o que vai aprender ---------- */
+  $$('[data-aprender]').forEach(el => {
+    el.innerHTML = D.aprender.map(b => `<li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5 5.5 11 12 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>${b}</span></li>`).join('');
   });
 
   /* ---------- reveals ---------- */
@@ -53,16 +53,6 @@
   }), { threshold: .14, rootMargin: '0px 0px -6% 0px' });
   const watch = () => $$('[data-r]:not(.in)').forEach(el => rm ? el.classList.add('in') : io.observe(el));
   watch();
-
-  /* ---------- contadores ---------- */
-  const cio = new IntersectionObserver(es => es.forEach(e => {
-    if (!e.isIntersecting) return; cio.unobserve(e.target);
-    const el = e.target, t = +el.dataset.count, w = v => el.textContent = String(v).padStart(2, '0');
-    if (rm) return w(t);
-    const t0 = performance.now();
-    (function tick(now) { const k = clamp((now - t0) / 1200, 0, 1); w(Math.round((1 - Math.pow(1 - k, 3)) * t)); if (k < 1) requestAnimationFrame(tick); })(t0);
-  }), { threshold: .6 });
-  $$('[data-count]').forEach(el => cio.observe(el));
 
   /* ---------- nav + CTA mobile ---------- */
   const nav = $('[data-nav]'), mcta = $('#mcta'), insc = $('#inscricao');

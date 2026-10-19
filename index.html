@@ -5,13 +5,13 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; manifest-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Curso Master Facial · Regenera Lifting Method</title>
-<meta name="description" content="Curso Master Facial · Regenera Lifting Method. Do envelhecimento à regeneração. 11 e 12 de outubro de 2026, Hotel Lezíria Parque, Vila Franca de Xira. Com Dra. Estela Cardoso, Prof. Belinha Cardoso e Dra. Manuela Ferreira.">
-<meta property="og:title" content="Curso Master Facial · Regenera Lifting Method">
-<meta property="og:description" content="11 e 12 de outubro de 2026 · Hotel Lezíria Parque, Vila Franca de Xira · Formação teórico-prática.">
+<title>Master de Microagulhamento Facial · MF Profissional</title>
+<meta name="description" content="Formação teórico-prática em microagulhamento facial. Turmas a 16 e 17 de novembro de 2026, Hotel Lezíria Parque, Vila Franca de Xira. Com Dra. Estela Cardoso, Prof. Belinha Cardoso e Dra. Manuela Ferreira.">
+<meta property="og:title" content="Master de Microagulhamento Facial · MF Profissional">
+<meta property="og:description" content="Formação teórico-prática em microagulhamento facial. Turmas a 16 e 17 de novembro de 2026, Hotel Lezíria Parque, Vila Franca de Xira. Com Dra. Estela Cardoso, Prof. Belinha Cardoso e Dra. Manuela Ferreira.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://cursomasterfacial.github.io/">
-<meta property="og:image" content="https://cursomasterfacial.github.io/assets/og-2.jpg">
+<meta property="og:url" content="https://mfprofissional.github.io/">
+<meta property="og:image" content="https://mfprofissional.github.io/assets/og-mf.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -114,8 +114,8 @@ p{text-wrap:pretty}
 .loaded .arch,.loaded .ribbon,.rm .arch,.rm .ribbon{opacity:1}
 /* título */
 .hx-copy{position:relative;z-index:4;width:100%;padding-block:clamp(30px,6vh,70px) clamp(110px,14vh,170px)}
-.hx-copy-in{max-width:min(45%,680px)}
-.hx-eyebrow{font:600 clamp(11px,1.05vw,15px)/1 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:#8E6E39;padding-left:.2em;margin-bottom:clamp(6px,1.4vh,14px)}
+.hx-copy-in{max-width:min(40vw,600px)}
+.hx-eyebrow{font:600 clamp(11px,1.05vw,15px)/1.5 var(--sans);letter-spacing:.34em;text-transform:uppercase;color:#8E6E39;padding-left:.2em;margin-bottom:clamp(6px,1.4vh,14px)}
 .hx-title{font-family:var(--serif);font-weight:500;letter-spacing:-.025em;line-height:1}
 .hx-title .r{display:block;font-size:clamp(3.6rem,7.3vw,8.8rem)}
 .hx-title .l{display:block;font-size:clamp(3rem,6.2vw,7.5rem);font-style:italic;font-weight:400;letter-spacing:-.025em;margin-top:.02em;padding-bottom:.08em;
@@ -130,9 +130,6 @@ p{text-wrap:pretty}
 
 /* ───────── INTRO · texto à esquerda, ficha à direita sobre fotografia de pele ───────── */
 .intro{position:relative;overflow:hidden;background:var(--ivory);border-top:1px solid var(--hair)}
-.intro-ph{position:absolute;top:0;right:0;bottom:0;width:58%;pointer-events:none}
-.intro-ph img{width:100%;height:100%;object-fit:cover;object-position:62% 24%;filter:brightness(1.1) saturate(.82) contrast(.94)}
-.intro-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ivory) 0%,rgba(247,244,238,.9) 18%,rgba(247,244,238,.42) 48%,rgba(247,244,238,.16) 100%),linear-gradient(0deg,rgba(247,244,238,.5),rgba(247,244,238,0) 38%),linear-gradient(180deg,rgba(247,244,238,.35),rgba(247,244,238,0) 30%)}
 .intro-curve{position:absolute;right:-2%;bottom:-6%;width:min(46%,760px);height:auto;pointer-events:none;overflow:visible}
 .intro-curve path{fill:none;stroke:var(--teal);stroke-width:1.2;opacity:.6;vector-effect:non-scaling-stroke}
 .js .intro-curve path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s var(--ease) .3s}
@@ -143,7 +140,10 @@ p{text-wrap:pretty}
 .intro-copy .lead{font:500 clamp(2.3rem,4.1vw,4rem)/1.06 var(--serif);letter-spacing:-.025em}
 .intro-copy .lead em{color:var(--teal);font-weight:400}
 .intro-copy .hero-p{font-size:clamp(16px,1.25vw,18.5px);line-height:1.6;max-width:52ch;margin-top:clamp(20px,3vh,30px)}
-.intro-card{background:rgba(251,249,245,.86);backdrop-filter:blur(16px) saturate(1.05);-webkit-backdrop-filter:blur(16px) saturate(1.05);border:1px solid rgba(23,23,23,.07);box-shadow:0 40px 80px -50px rgba(90,66,32,.4);padding:clamp(22px,2.6vw,40px)}
+.intro-media{position:relative}
+.intro-fig{aspect-ratio:4/3;overflow:hidden;background:var(--sand);box-shadow:0 40px 80px -56px rgba(90,66,32,.45)}
+.intro-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 55%}
+.intro-card{position:relative;margin:-36px 0 0 clamp(28px,5vw,80px);background:rgba(251,249,245,.86);backdrop-filter:blur(16px) saturate(1.05);-webkit-backdrop-filter:blur(16px) saturate(1.05);border:1px solid rgba(23,23,23,.07);box-shadow:0 40px 80px -50px rgba(90,66,32,.4);padding:clamp(22px,2.6vw,40px)}
 .intro-card .meta{border-top:1px solid var(--hair)}
 .intro-card .meta li{grid-template-columns:clamp(110px,10vw,150px) 1fr;padding-block:clamp(16px,2.2vh,22px);font-size:clamp(15px,1.15vw,17px)}
 .intro-card .meta strong,.intro-card .meta span{font-weight:400}
@@ -311,8 +311,8 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
 .js .pf.in .pf-card,.rm .pf .pf-card{clip-path:inset(0)}
 .js .pf .pf-card img{scale:1.14;transition:transform 1.4s var(--ease),filter .8s,scale 2.2s var(--ease) calc(var(--d,0s) + .1s)}
 .js .pf.in .pf-card img,.rm .pf .pf-card img{scale:1}
-.js .intro-ph[data-r]{transform:scale(1.07);transition:opacity 2s var(--ease),transform 2.6s var(--ease)}
-.js .intro-ph[data-r].in{transform:none}
+.js .intro-fig img{transform:scale(1.07);transition:transform 2.6s var(--ease)}
+.js .in .intro-fig img,.rm .intro-fig img{transform:none}
 /* cartões com inclinação 3D ao passar o rato */
 .pf{perspective:1100px}
 .pf-card{transform-style:preserve-3d;will-change:transform}
@@ -329,17 +329,46 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
 #mcta a{gap:12px;letter-spacing:.1em;font-size:11.5px}
 #mcta a span{font:400 1.15rem var(--serif);letter-spacing:0;color:var(--champ-l);white-space:nowrap}
 
+/* ───────── MICROAGULHAMENTO: peças novas no mesmo registo ───────── */
+.hx-facts li:last-child{flex-basis:100%}.hx-facts li:last-child::before{display:none}
+.hx-p{margin-top:clamp(12px,2vh,18px);max-width:48ch;font-size:clamp(15px,1.1vw,16.5px);line-height:1.62;color:var(--ink-2)}
+.meta strong small{display:block;margin-top:2px;font-size:13.5px;color:var(--taupe)}
+.met2 .pull em{font-style:italic;color:var(--teal)}
+.mod-d{font-size:15.5px;line-height:1.65;color:var(--ink-2);max-width:56ch}
+.mod-f{margin-top:18px;max-width:420px;background:var(--sand);border:1px solid var(--hair-s)}
+.mod-f img{width:100%;height:auto}
+.mod-f+.mod-f{margin-top:12px}
+.benef{list-style:none;display:grid;gap:0;border-top:1px solid rgba(247,244,238,.2)}
+.benef li{display:flex;gap:16px;align-items:baseline;padding:16px 0;border-bottom:1px solid rgba(247,244,238,.2);font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:rgba(247,244,238,.88)}
+.benef svg{width:14px;flex:none;color:var(--champ-l);transform:translateY(2px)}
+.prob-grid{align-items:start}
+.pull-s{font-size:clamp(2.1rem,4vw,3.8rem);line-height:1.06;max-width:20ch}
+.insc h2{font-size:clamp(2rem,3.4vw,3.2rem);max-width:22ch}
+.insc-lead{font:400 italic clamp(1.1rem,1.5vw,1.3rem)/1.4 var(--serif);color:var(--ink-2)}
+.turmas{border:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%}
+.turma{position:relative;display:grid;gap:6px;padding:16px 18px;border:1px solid var(--hair);background:var(--paper);cursor:pointer;transition:border-color .35s,background .35s,box-shadow .35s}
+.turma input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.turma-d{font:300 2.4rem/1 var(--serif);letter-spacing:-.02em;color:var(--champ-d)}
+.turma-t{font:600 10.5px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--taupe)}
+.turma::after{content:"";position:absolute;top:14px;right:14px;width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--champ-d);transition:background .3s,box-shadow .3s}
+.turma:hover{border-color:var(--champ-d)}
+.turma:has(input:checked){border-color:var(--ink);background:var(--white);box-shadow:0 18px 40px -28px rgba(90,66,32,.45)}
+.turma:has(input:checked) .turma-t{color:var(--ink)}
+.turma:has(input:checked)::after{background:var(--teal);box-shadow:inset 0 0 0 3px var(--white),0 0 0 1px var(--teal)}
+.turma:has(input:focus-visible){outline:2px solid var(--teal);outline-offset:3px}
+.btn-wrap{white-space:normal;text-align:center;line-height:1.5}
+.insc-info{grid-template-columns:1fr 1.6fr}
+
 /* ───────── RESPONSIVO ───────── */
 @media(max-width:980px){
   .intro-grid{grid-template-columns:1fr;padding-block:70px 60px;gap:44px}
-  .intro-ph{top:auto;width:100%;height:min(560px,120vw)}
-  .intro-ph::after{background:linear-gradient(180deg,var(--ivory) 0%,rgba(247,244,238,.55) 40%,rgba(247,244,238,.2) 100%)}
+  .intro-card{margin:-24px 10px 0}
   .intro-curve{width:90%;right:-10%;bottom:-2%}
   .hx{flex-direction:column;align-items:stretch;min-height:0;background:radial-gradient(120% 60% at 0% 0%,#FFFEFB,rgba(255,254,251,0) 60%),linear-gradient(180deg,#FAF7F1,#F4EDE2)}
   .hx-bg{-webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%);mask-image:linear-gradient(to bottom,transparent,#000 30%)}
   .hx-copy{order:0;padding-block:clamp(22px,4vh,40px) 6px}
   .hx-copy-in{max-width:none}
-  .hx-title .r{font-size:clamp(3.6rem,17vw,7rem)}.hx-title .l{font-size:clamp(3rem,14.6vw,6rem)}
+  .hx-title .r{font-size:clamp(3.6rem,17vw,7rem)}.hx-title .l{font-size:clamp(2.6rem,12.4vw,6rem)}
   .hx-visual{order:1;position:relative;inset:auto;height:min(92vw,680px)}
   .hx-people{width:96%;right:2%}
   .arch.a1{left:4%;top:6%;width:94vw}.arch.a2{left:46%;top:-4%;width:90vw}
@@ -378,19 +407,19 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
 <header data-nav>
   <div class="wrap nav">
     <nav aria-label="Principal"><ul>
-      <li><a href="#master">Master</a></li><li><a href="#metodo">Método</a></li><li><a href="#programa">Programa</a></li><li><a href="#especialistas">Formadoras</a></li><li><a href="#inscricao">Inscrição</a></li>
+      <li><a href="#master">Master</a></li><li><a href="#abordagem">Abordagem</a></li><li><a href="#programa">Programa</a></li><li><a href="#especialistas">Formadoras</a></li><li><a href="#inscricao">Inscrição</a></li>
     </ul></nav>
-    <a class="btn" href="https://wa.me/351969290136?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20no%20Curso%20Master%20Facial%20%C2%B7%20Regenera%20Lifting%20Method%2C%20nos%20dias%2011%20e%2012%20de%20outubro%20de%202026%2C%20no%20Hotel%20Lez%C3%ADria%20Parque%2C%20em%20Vila%20Franca%20de%20Xira.%20Gostaria%20de%20garantir%20a%20minha%20participa%C3%A7%C3%A3o%20e%20saber%20como%20fazer%20o%20pagamento." target="_blank" rel="noopener">Garantir a minha participação</a>
+    <a class="btn" href="#inscricao" data-wa="geral">Garantir a minha participação</a>
     <button data-burger aria-label="Menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
   </div>
 </header>
 <nav data-mmenu id="mmenu" aria-label="Menu móvel">
   <div>
-    <a class="m" href="#master">Master</a><a class="m" href="#metodo">Método</a><a class="m" href="#programa">Programa</a><a class="m" href="#especialistas">Formadoras</a><a class="m" href="#inscricao">Inscrição</a>
+    <a class="m" href="#master">Master</a><a class="m" href="#abordagem">Abordagem</a><a class="m" href="#programa">Programa</a><a class="m" href="#especialistas">Formadoras</a><a class="m" href="#inscricao">Inscrição</a>
   </div>
   <div class="mm-foot">
-    <p class="kick">11 e 12 out 2026 · Vila Franca de Xira</p>
-    <a class="btn" href="https://wa.me/351969290136?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20no%20Curso%20Master%20Facial%20%C2%B7%20Regenera%20Lifting%20Method%2C%20nos%20dias%2011%20e%2012%20de%20outubro%20de%202026%2C%20no%20Hotel%20Lez%C3%ADria%20Parque%2C%20em%20Vila%20Franca%20de%20Xira.%20Gostaria%20de%20garantir%20a%20minha%20participa%C3%A7%C3%A3o%20e%20saber%20como%20fazer%20o%20pagamento." target="_blank" rel="noopener">Garantir a minha participação</a>
+    <p class="kick">16 e 17 nov 2026 · Vila Franca de Xira</p>
+    <a class="btn" href="#inscricao" data-wa="geral">Garantir a minha participação</a>
   </div>
 </nav>
 
@@ -426,11 +455,13 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
 
     <div class="wrap hx-copy">
       <div class="hx-copy-in">
-        <p class="hx-eyebrow" data-h style="--d:.1s">Curso Master Facial</p>
-        <h1 class="hx-title"><span class="sr">Curso Master Facial · </span><span class="line"><span class="r" style="--d:.18s">Regenera</span></span><span class="line"><span class="l" style="--d:.3s">Lifting Method</span></span></h1>
-        <ul class="hx-facts" data-h style="--d:.6s"><li>11 e 12 de outubro de 2026</li><li>Vila Franca de Xira</li></ul>
+        <p class="hx-eyebrow" data-h style="--d:.1s">Master de Microagulhamento Facial</p>
+        <h1 class="hx-title"><span class="sr">Master de Microagulhamento Facial · </span><span class="line"><span class="r" style="--d:.18s">MF</span></span><span class="line"><span class="l" style="--d:.3s">Profissional</span></span></h1>
+        <p class="hx-tag" data-h style="--d:.42s">Conheça a pele. Avalie com critério. Personalize cada tratamento.</p>
+        <p class="hx-p" data-h style="--d:.5s">Uma formação teórico-prática para compreender o microagulhamento facial, avaliar cada pele e organizar o procedimento com segurança e responsabilidade, desde a preparação até aos cuidados posteriores.</p>
+        <ul class="hx-facts" data-h style="--d:.6s"><li>16 e 17 de novembro de 2026</li><li>Duas turmas</li><li>Vila Franca de Xira</li></ul>
         <div class="hx-ctas" data-h style="--d:.7s">
-          <a class="btn" href="https://wa.me/351969290136?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20no%20Curso%20Master%20Facial%20%C2%B7%20Regenera%20Lifting%20Method%2C%20nos%20dias%2011%20e%2012%20de%20outubro%20de%202026%2C%20no%20Hotel%20Lez%C3%ADria%20Parque%2C%20em%20Vila%20Franca%20de%20Xira.%20Gostaria%20de%20garantir%20a%20minha%20participa%C3%A7%C3%A3o%20e%20saber%20como%20fazer%20o%20pagamento." target="_blank" rel="noopener">Garantir a minha participação <svg viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+          <a class="btn" href="#inscricao" data-wa="geral">Garantir a minha participação <svg viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
           <a class="ulink" href="#programa">Conhecer o programa</a>
         </div>
       </div>
@@ -438,69 +469,64 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
   </div>
 
   <div class="intro">
-    <div class="intro-ph" data-r aria-hidden="true"><img src="assets/pele.webp" alt="" loading="lazy" decoding="async" width="1800" height="1200"></div>
     <svg class="intro-curve" data-r viewBox="0 0 760 360" aria-hidden="true"><path pathLength="1" d="M0 352 C150 170 320 120 470 210 S690 300 760 92"/></svg>
     <div class="wrap intro-grid">
       <div class="intro-copy">
-        <p class="intro-tag" data-r>Do envelhecimento à regeneração.</p>
-        <h2 class="lead" data-r style="--d:.08s">Não aprenda apenas a usar tecnologias. Aprenda a decidir <em>quando, porquê e como</em> utilizá&#8209;las.</h2>
-        <p class="hero-p" data-r style="--d:.16s">Uma imersão de dois dias para compreender o processo de envelhecimento facial, avaliar cada cliente de forma estratégica e construir protocolos regenerativos personalizados com tecnologias de alta performance.</p>
+        <p class="intro-tag" data-r>Sobre o Master</p>
+        <h2 class="lead" data-r style="--d:.08s">Uma boa aplicação começa numa <em>avaliação cuidada.</em></h2>
+        <p class="hero-p" data-r style="--d:.16s">Não basta saber utilizar o equipamento, é preciso conhecer a pele, identificar possíveis contraindicações e perceber quais os cuidados necessários antes, durante e após cada tratamento.</p>
       </div>
-      <div class="intro-card" data-r style="--d:.14s">
+      <div class="intro-media" data-r style="--d:.14s">
+        <figure class="intro-fig"><img src="assets/dermapen.webp" alt="Caneta Dermapen para microagulhamento facial, pousada num suporte ondulado sobre fundo bege" loading="lazy" decoding="async" width="1448" height="1086"></figure>
+      <div class="intro-card">
         <ul class="meta">
-          <li><b>Data</b><strong>11 e 12 de outubro de 2026</strong></li>
-          <li><b>Horário</b><span>09:00 às 18:00</span></li>
+          <li><b>Datas</b><strong>16 ou 17 de novembro de 2026<small>Turmas independentes, à escolha</small></strong></li>
+          <!-- TODO: horário (mostrar só quando confirmado): <li><b>Horário</b><span>…</span></li> -->
           <li><b>Local</b><span>Hotel Lezíria Parque, Vila Franca de Xira</span></li>
-          <li><b>Formato</b><span>Teórico-prático</span></li>
+          <li><b>Formato</b><span>Teórico-prático, exclusivamente rosto</span></li>
         </ul>
       </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ 02 · PROBLEMA ═══════════ -->
-<section class="chap prob" aria-labelledby="h-prob">
-  <div class="wrap">
-    <div class="prob-grid">
-      <div>
-        <p class="label" data-r>A lógica atual</p>
-        <h2 class="prob-h" id="h-prob" data-r><span class="line"><span>Um bom equipamento</span></span><span class="line"><span style="--d:.08s">não substitui um bom</span></span><span class="line"><span style="--d:.16s"><em>raciocínio clínico.</em></span></span></h2>
-      </div>
-      <div class="prob-r" data-r style="--d:.15s">
-        <p>Muitos profissionais dominam equipamentos, mas continuam dependentes de protocolos padronizados. A proposta deste Master é mudar essa lógica, a começar pela pergunta que se faz antes de tratar.</p>
-        <div class="swap">
-          <s>«Que aparelho devo usar?»</s>
-          <strong>«De que é que esta face <em>precisa realmente?</em>»</strong>
-        </div>
-      </div>
-    </div>
-    <p class="closing" data-r><span class="l1">A tecnologia deixa de comandar o tratamento.</span><br><span class="l2"><span>O </span><em>diagnóstico</em><span> passa a comandar a tecnologia.</span></span></p>
-  </div>
-</section>
-
-<!-- ═══════════ 03 · MÉTODO ═══════════ -->
-<section class="chap met2" id="metodo">
+<!-- ═══════════ 02 · ABORDAGEM ═══════════ -->
+<section class="chap met2" id="abordagem">
   <div class="wrap">
     <div class="met2-head">
       <div>
-        <p class="label" data-r>O método</p>
-        <h2 class="pull" data-r>Regenera Lifting<sup>™</sup> Method</h2>
+        <p class="label" data-r>A abordagem</p>
+        <h2 class="pull" data-r>Uma abordagem em <em>cinco etapas</em></h2>
       </div>
-      <p class="met2-sub" data-r style="--d:.1s">Uma metodologia em cinco etapas para transformar avaliação em estratégia terapêutica.</p>
+      <p class="met2-sub" data-r style="--d:.1s">Da avaliação ao acompanhamento, cada etapa prepara a seguinte.</p>
     </div>
     <ol class="steps" id="steps" data-r></ol>
   </div>
 </section>
 
-<!-- ═══════════ 04 · PROGRAMA ═══════════ -->
+<!-- ═══════════ 03 · PROGRAMA ═══════════ -->
 <section class="prog chap" id="programa">
   <div class="wrap prog-grid">
     <div class="prog-side">
       <p class="label" data-r>O programa</p>
-      <h2 data-r>Dois dias. Uma <em>progressão</em> completa.</h2>
-      <p data-r>O primeiro dia constrói o raciocínio: avaliação, anatomia e diagnóstico. O segundo transforma-o em prática, com tecnologias, protocolos, demonstração em modelo e casos clínicos.</p>
+      <h2 data-r>Seis módulos <em>num único dia</em> de formação.</h2>
+      <p data-r>Cada turma percorre todo o conteúdo, da teoria à demonstração prática.</p>
     </div>
     <div data-prog data-r></div>
+  </div>
+</section>
+
+<!-- ═══════════ 04 · O QUE VAI APRENDER ═══════════ -->
+<section class="chap prob" aria-labelledby="h-aprender">
+  <div class="wrap">
+    <div class="prob-grid">
+      <div>
+        <p class="label" data-r>Objetivos</p>
+        <h2 class="prob-h" id="h-aprender" data-r><span class="line"><span>O que vai</span></span><span class="line"><span style="--d:.08s"><em>aprender.</em></span></span></h2>
+      </div>
+      <ul class="benef" data-aprender data-r style="--d:.15s"></ul>
+    </div>
   </div>
 </section>
 
@@ -510,8 +536,8 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
     <div class="chap-head">
       <p class="label" data-r>As formadoras</p>
       <div>
-        <h2 class="pull" data-r>Três percursos. <em>Uma só</em> formação.</h2>
-        <p class="esp-intro" data-r>Raciocínio clínico, prática com tecnologias, cosmetologia e home care. Cada formadora conduz a parte do Master em que trabalha todos os dias.</p>
+        <h2 class="pull pull-s" data-r>Três percursos que se complementam no <em>cuidado da pele.</em></h2>
+        <p class="esp-intro" data-r>Conhecimento, experiência profissional, cosmetologia e atendimento humanizado reunidos numa formação dedicada ao microagulhamento facial.</p>
       </div>
     </div>
     <div class="profs" id="profs"></div>
@@ -523,16 +549,23 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
   <div class="wrap insc">
     <div class="insc-head">
       <p class="label" data-r>Inscrição</p>
-      <h2 data-r>Transforme conhecimento em resultados mais <em>previsíveis.</em></h2>
+      <h2 data-r>Aprofunde o seu conhecimento e desenvolva uma prática mais consciente e <em>personalizada.</em></h2>
     </div>
     <div class="insc-buy" data-r style="--d:.1s">
-      <p class="insc-price"><strong>385 €</strong><span>Transferência bancária ou MB WAY<br>Pagamento fracionado possível</span></p>
-      <a class="btn" href="https://wa.me/351969290136?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20no%20Curso%20Master%20Facial%20%C2%B7%20Regenera%20Lifting%20Method%2C%20nos%20dias%2011%20e%2012%20de%20outubro%20de%202026%2C%20no%20Hotel%20Lez%C3%ADria%20Parque%2C%20em%20Vila%20Franca%20de%20Xira.%20Gostaria%20de%20garantir%20a%20minha%20participa%C3%A7%C3%A3o%20e%20saber%20como%20fazer%20o%20pagamento." target="_blank" rel="noopener">Garantir a minha participação <svg viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+      <p class="insc-lead">Escolha a sua turma: dia 16 ou dia 17.</p>
+      <fieldset class="turmas" data-turmas>
+        <legend class="sr">Escolha a turma</legend>
+        <label class="turma"><input type="radio" name="turma" value="16" checked><span class="turma-d">16</span><span class="turma-t">Turma 16 de novembro</span></label>
+        <label class="turma"><input type="radio" name="turma" value="17"><span class="turma-d">17</span><span class="turma-t">Turma 17 de novembro</span></label>
+      </fieldset>
+      <!-- TODO: preço · condições de pagamento · materiais incluídos · certificado (aguardam confirmação) -->
+      <a class="btn btn-wrap" href="#inscricao" data-wa="turma">Quero inscrever-me no Master de Microagulhamento <svg viewBox="0 0 18 10" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg></a>
+      <p class="sr" aria-live="polite" data-turma-sel></p>
       <p class="insc-note">Vagas limitadas</p>
     </div>
     <dl class="insc-info" data-r>
-      <div><dt>Data</dt><dd>11 e 12 de outubro de 2026</dd></div>
-      <div><dt>Horário</dt><dd>09:00 às 18:00</dd></div>
+      <div><dt>Datas</dt><dd>16 e 17 de novembro de 2026 (turmas independentes)</dd></div>
+      <!-- TODO: horário: <div><dt>Horário</dt><dd>…</dd></div> -->
       <div><dt>Local</dt><dd>Hotel Lezíria Parque, Vila Franca de Xira</dd></div>
     </dl>
   </div>
@@ -540,7 +573,7 @@ footer{margin-top:clamp(90px,13vh,150px);border-top:1px solid var(--ink)}
 </section>
 </main>
 
-<div id="mcta"><a href="https://wa.me/351969290136?text=Ol%C3%A1%21%20Vim%20atrav%C3%A9s%20do%20site%20e%20tenho%20interesse%20no%20Curso%20Master%20Facial%20%C2%B7%20Regenera%20Lifting%20Method%2C%20nos%20dias%2011%20e%2012%20de%20outubro%20de%202026%2C%20no%20Hotel%20Lez%C3%ADria%20Parque%2C%20em%20Vila%20Franca%20de%20Xira.%20Gostaria%20de%20garantir%20a%20minha%20participa%C3%A7%C3%A3o%20e%20saber%20como%20fazer%20o%20pagamento." target="_blank" rel="noopener">Garantir a minha participação</a></div>
+<div id="mcta"><a href="#inscricao" data-wa="geral">Garantir a minha participação</a></div>
 
 <script src="assets/content.js"></script>
 <script src="assets/common.js"></script>
