@@ -40,7 +40,7 @@ window.MASTER = {
       papel: 'Técnica e prática aplicada',
       bio: 'Mais de 25 anos de experiência. Fundadora da BeLuxClinic, é referência em estética avançada e atendimento humanizado. Formadora e palestrante em congressos nacionais e internacionais, desenvolve projetos que aproximam Portugal e o Brasil.' },
     { id: 'manuela', ig: 'https://www.instagram.com/clinica.mferreira/', img: 'assets/manuela.webp', nome: 'Dra. Manuela Ferreira', ini: 'MF',
-      roles: 'Esteticista · Naturopata · MF Profissional',
+      roles: 'CEO MF Profissional · Esteticista · Naturopata · Empresária',
       papel: 'Cosmetologia e home care estratégico',
       bio: 'Mais de três décadas de experiência em estética e naturopatia. Criou a MF Profissional, marca portuguesa feita por profissionais para profissionais, que une tecnologia cosmética e ativos 100% naturais numa visão holística e integrativa.' }
   ],
