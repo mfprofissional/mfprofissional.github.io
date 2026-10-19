@@ -31,7 +31,7 @@ window.MASTER = {
   ],
 
   profs: [
-    { id: 'estela', ig: 'https://www.instagram.com/draestelacardoso/', img: 'assets/estela.webp', nome: 'Dra. Estela Cardoso', ini: 'EC',
+    { id: 'estela', ig: 'https://www.instagram.com/draestelacardoso/', img: 'assets/estela-retrato.webp', nome: 'Dra. Estela Cardoso', ini: 'EC',
       roles: 'Educadora · Esteticista · Fisioterapeuta · Cosmetóloga · Gerontóloga',
       papel: 'Raciocínio clínico e indicação',
       bio: 'Pós-graduada em Estética, Cosmetologia, Fisioterapia Dermato-Funcional e Estética Integrativa, com especialização em Longevidade Saudável. Professora, palestrante, formadora e mentora, capacita profissionais no Brasil e na Europa.' },
