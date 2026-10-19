@@ -35,7 +35,7 @@
   /* ---------- programa: módulos em <details> ---------- */
   $$('[data-prog]').forEach(el => {
     el.innerHTML = D.prog.map((m, i) => `
-      <details class="mod" name="prog"${i ? '' : ' open'}><summary><span class="mod-n">${String(i + 1).padStart(2, '0')}</span><span class="mod-t">${m.t}</span><span class="mod-x" aria-hidden="true"></span></summary>
+      <details class="mod" name="prog" style="--i:${i}"${i ? '' : ' open'}><summary><span class="mod-n">${String(i + 1).padStart(2, '0')}</span><span class="mod-t">${m.t}</span><span class="mod-x" aria-hidden="true"></span></summary>
         <div class="mod-b"><p class="mod-d">${m.d}</p>${(m.img || []).map(f => `<figure class="mod-f" data-slot><img src="${f.src}" alt="${esc(f.alt)}" width="1200" height="900" loading="lazy" decoding="async"></figure>`).join('')}</div>
       </details>`).join('');
     $$('[data-slot] img', el).forEach(slot);
@@ -44,7 +44,7 @@
 
   /* ---------- o que vai aprender ---------- */
   $$('[data-aprender]').forEach(el => {
-    el.innerHTML = D.aprender.map(b => `<li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5 5.5 11 12 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>${b}</span></li>`).join('');
+    el.innerHTML = D.aprender.map((b, i) => `<li style="--i:${i}"><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7.5 5.5 11 12 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg><span>${b}</span></li>`).join('');
   });
 
   /* ---------- reveals ---------- */
